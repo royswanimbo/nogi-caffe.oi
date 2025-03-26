@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nogi Coffee</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+        integrity="sha512-Fo3rlrZj/kTc1f8f8j1k8iVfGBrS2jy4v2K9bF7ZyU0Gk3G/9BJ69nL3rU5+7EaH6QOvHdIurLqej1ouVf/GMg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        .container {
+            width: 80%;
+            margin: auto;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        .flex-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .left {
+            flex: 1;
+            text-align: center;
+        }
+
+        .left img {
+            width: 100%;
+            max-width: 300px;
+            display: block;
+            margin: 10px auto;
+        }
+
+        .right {
+            flex: 1;
+            text-align: left;
+            padding: 20px;
+        }
+
+        .menu-section {
+            background-color: #f8f8f8;
+            padding: 40px 0;
+            text-align: center;
+        }
+
+        .menu-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .menu-item {
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 200px;
+        }
+
+        .menu-item img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .pesan-button {
+            margin-top: 10px;
+            padding: 10px;
+            background: #05d343;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .pesan-button:hover {
+            background: #e65c00;
+        }
+
+        nav,
+        footer {
+            padding: 20px;
+
+        }
+    </style>
+
+    <script>
+        function searchMenu() {
+            let input = document.getElementById('search-box').value.toLowerCase();
+            let menuItems = document.getElementsByClassName('menu-item');
+
+            for (let i = 0; i < menuItems.length; i++) {
+                let itemName = menuItems[i].getElementsByTagName('h2')[0].innerText.toLowerCase();
+                if (itemName.includes(input)) {
+                    menuItems[i].style.display = "block";
+                } else {
+                    menuItems[i].style.display = "none";
+                }
+            }
+        }
+    </script>
+
+</head>
+
+<body>
+    <nav>
+
+        <div id="logo-img">
+            <img src="img/1.png" alt="" width="50px">
+        </div>
+
+        <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Beranda</a></li>
+            <li><a href="about.html">Tentang</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="contact.html">Kontak</a></li>
+        </ul>
+    </nav>
+
+    <script>
+        function toggleMenu() {
+            const nav = document.querySelector(".nav-links");
+            nav.classList.toggle("active");
+        }
+    </script>
+
+    <!-- ini bagian Daftar Menu -->
+    <div class="container">
+        <img src="OIP__2_-removebg-preview(1).png" alt="" width="100px">
+        <h1>📝Daftar Produk</h1>
+        <div class="flex-container">
+            <div class="left">
+                <h2>🍱Makanan &amp; ☕Minuman</h2>
+                <img src="img/menu.jpg" alt="Menu Makanan">
+                <img src="img/menu2.jpg" alt="Menu Minuman">
+            </div>
+            <div class="right">
+                <h3>🍱MAKANAN</h3>
+                <ul>
+                    <li>Wam Smoke BBQ – 50K</li>
+                    <li>Wam Smoke Stick – 50K</li>
+                    <li>Ikan Bakar Tuna – 35K</li>
+                    <li>Ikan Bakar Tuna – 35K</li>
+                </ul>
+                <h3>☕MINUMAN (HOT ARABICA COFFEE)</h3>
+                <ul>
+                    <li>Americano Susu – 20K</li>
+                    <li>Americano Hitam – 15K</li>
+                    <li>Tubruk Hitam – 15K</li>
+                    <li>Long Black – 15K</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+    <section style="background-color: rgb(22, 36, 223); text-align: center;">
+        <big>
+            <marquee align='center' direction='left' scrollamount='10'> <span class="text-gradient d-inline">
+                    <h1 style="color:rgb(4, 95, 24);">Hello
+                        Selamat Datang Di <h2 style="color: rgb(255, 197, 5);">Di menu kedai Kopi Nogi</h2>
+                        Kami banyak terimakasih atas kujinginya <h2 style="color: chartreuse;">Silakan Pilih Sesuka Anda
+                        </h2>
+                    </h1>
+                </span></marquee>
+            </h2>
+        </big>
+    </section>
+
+    <!-- ini bagian dari menu -->
+    <section class="menu-section">
+        <h1>Menu</h1>
+        <p>Ayo Cari Menu Sesui favorit Anda!</p>
+        <br>
+        <input type="text" id="search-box" onkeyup="searchMenu()" placeholder="Cari menu...">
+        <div class="menu-container">
+            <div class="menu-item">
+                <img src="img/1.jpg" alt="Americano Sauce" />
+                <h2>Americano Sauce</h2>
+                <p>20K</p>
+                <button class="pesan-button">✔ Pesan</button>
+            </div>
+            <div class="menu-item">
+                <img src="img/2.jpg" alt="Turkish Khatem" />
+                <h2>Turkish Khatem</h2>
+                <p>35K</p>
+                <button class="pesan-button">✔ Pesan</button>
+            </div>
+            <div class="menu-item">
+                <img src="img/3.jpg" alt="Long Black" />
+                <h2>Long Black</h2>
+                <p>25K</p>
+                <button class="pesan-button">✔ Pesan</button>
+            </div>
+            <div class="menu-item">
+                <img src="img/4.jpg" alt="Espresso" />
+                <h2>Espresso</h2>
+                <p>18K</p>
+                <button class="pesan-button">✔ Pesan</button>
+            </div>
+            <div class="menu-item">
+                <img src="img/5.jpg" alt="Cappuccino" />
+                <h2>Cappuccino</h2>
+                <p>25K</p>
+                <button class="pesan-button">✔ Pesan</button>
+            </div>
+            <div class="menu-item">
+                <img src="img/6.jpg" alt="Latte" />
+                <h2>Latte</h2>
+                <p>28K</p>
+                <button class="pesan-button">✔ Pesan</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ini bagiang footer -->
+    <footer>
+        <div class="footer-content">
+            <p>Copyright © Kedai Kopi Nogi 2025.</p>
+            <div class="social-icons">
+                <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

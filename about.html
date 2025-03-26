@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nogi Coffee</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+        integrity="sha512-Fo3rlrZj/kTc1f8f8j1k8iVfGBrS2jy4v2K9bF7ZyU0Gk3G/9BJ69nL3rU5+7EaH6QOvHdIurLqej1ouVf/GMg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+
+    <style>
+        /* Reset dasar */
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f4f4;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Bagian section profil */
+        .profile-section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        /* Bagian gambar profil */
+        .profile-image {
+            margin-right: 20px;
+            text-align: center;
+            /* Supaya teks di bawah gambar terpusat */
+        }
+
+        .profile-image img {
+            width: 300px;
+            border-radius: 8px;
+        }
+
+        /* Nama di bawah gambar */
+        .profile-image .profile-name {
+            font-size: 1.2rem;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        /* Bagian social media */
+        .social-links {
+            margin-top: 8px;
+            display: flex;
+            justify-content: center;
+            /* Rata tengah */
+            gap: 10px;
+            /* Jarak antar tautan */
+        }
+
+        .social-links a {
+            text-decoration: none;
+            color: #3498db;
+            font-weight: bold;
+        }
+
+        .social-links a:hover {
+            color: #2980b9;
+        }
+
+        /* Konten profil */
+        .profile-content {
+            max-width: 600px;
+        }
+
+        .profile-content h1 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        .profile-content h3 {
+            margin-bottom: 15px;
+            color: #555;
+        }
+
+        .profile-content p {
+            margin-bottom: 15px;
+        }
+
+        /* Container untuk bagian detail */
+        .container {
+            margin-top: 20px;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        /* Tombol "Selengkapnya" */
+        button {
+            padding: 10px 15px;
+            background-color: #3498db;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #2980b9;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <div class="logo"> <img src="img/1.png" alt="" width="50px"></div>
+        <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Beranda</a></li>
+            <li><a href="about.html">Tentang</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="contact.html">Kontak</a></li>
+        </ul>
+    </nav>
+
+    <script>
+        function toggleMenu() {
+            const nav = document.querySelector(".nav-links");
+            nav.classList.toggle("active");
+        }
+    </script>
+
+
+    <!-- ini bagian profile / sejarah -->
+
+    <body>
+
+        <section class="profile-section">
+            <div class="profile-image">
+                <img src="img/kk.jpg" alt="Profile Sepi Wanimbo">
+                <!-- Tulisan di bawah gambar -->
+                <div class="profile-name">Sepi Wanimbo</div>
+                <!-- Tautan Media Sosial -->
+                <div class="footer-content">
+                    <div class="social-icons">
+                        <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="social-links">
+                    <a href="https://facebook.com" target="_blank"></a>
+                    <a href="https://instagram.com" target="_blank"></a>
+                    <a href="https://youtube.com" target="_blank"></a>
+                    <a href="https://wa.me/628xxxxx" target="_blank"></a>
+                </div>
+            </div>
+
+            <div class="profile-content">
+                <h1>Profil Sepi Wanimbo</h1>
+                <h3>Selamat datang di halaman profil Sepi Wanimbo.</h3>
+                <p>
+                    Di sini, kami menghadirkan perjalanan inspiratif Sepi Wanimbo, seorang anak muda asli Papua asal
+                    Kabupaten Lanny Jaya yang telah berkontribusi besar dalam industri kopi dan pelestarian budaya
+                    lokal.
+                    Dengan semangat kerja keras dan kecintaannya pada kopi, ia menjadi salah satu sosok yang berperan
+                    penting dalam perkembangan Kedai Kopi Nogi di Wamena.
+                </p>
+                <div class="container">
+                    <!-- Bagian detail yang akan ditampilkan atau disembunyikan -->
+                    <div id="detail" class="hidden">
+                        <h2>Tentang Sepi Wanimbo</h2>
+                        <p>
+                            Sepi Wanimbo adalah seorang pengusaha muda dan barista berbakat yang mengawali kariernya
+                            dari
+                            nol. Berbekal tekad dan kegigihan, ia mendalami seluk-beluk dunia kopi, mulai dari proses
+                            pemilihan biji kopi terbaik, teknik roasting yang tepat, hingga cara menyajikan kopi
+                            berkualitas
+                            tinggi.
+                        </p>
+                        <h3>Perjalanan dan Pencapaian</h3>
+                        <p>
+                            ✅ Lahir dan besar di Papua – Sepi Wanimbo tumbuh di lingkungan yang kaya akan tradisi dan
+                            budaya, yang membentuknya menjadi pribadi yang tangguh dan inovatif.<br>
+                            ✅ Pendidikan dan pengalaman – Ia menempuh pendidikan dengan fokus pada kewirausahaan dan
+                            industri kopi, serta mengikuti berbagai pelatihan untuk meningkatkan keahliannya.<br>
+                            ✅ Kedai Kopi Nogi – Berperan sebagai motor penggerak utama dalam pengelolaan kedai ini, ia
+                            memastikan setiap cangkir kopi yang disajikan memiliki cita rasa autentik Papua.<br>
+                            ✅ Pelestarian Budaya Lokal – Selain membangun usaha, ia juga aktif dalam mengangkat budaya
+                            dan
+                            tradisi Papua melalui kopi, menciptakan ruang bagi masyarakat untuk berkumpul dan berbagi
+                            cerita.<br>
+                            ✅ Inovasi dan Visi – Dengan visinya, Sepi Wanimbo ingin membawa kopi Papua ke tingkat yang
+                            lebih
+                            tinggi, dikenal tidak hanya di dalam negeri tetapi juga di kancah internasional.
+                        </p>
+                    </div>
+                    <button onclick="tampilkanDetail()">Selengkapnya</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- JavaScript -->
+        <script>
+            function tampilkanDetail() {
+                const detail = document.getElementById("detail");
+                detail.classList.toggle("hidden");
+            }
+        </script>
+
+    </body>
+
+    <!-- ini bagiang footer -->
+    <footer>
+        <div class="footer-content">
+            <p>Copyright © Kedai Kopi Nogi 2025</p>
+            <div class="social-icons">
+                <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

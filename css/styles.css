@@ -1,0 +1,340 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+nav img {
+  border-radius: 50px;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+/* Navbar */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #333;
+  color: white;
+  padding: 15px 20px;
+}
+
+.logo {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links li {
+  padding: 10px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #ff5733;
+}
+
+/* Menu Toggle untuk Mobile */
+.menu-toggle {
+  display: none;
+  font-size: 1.8em;
+  cursor: pointer;
+}
+
+/* Responsif */
+@media screen and (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background: #333;
+    width: 100%;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links li {
+    padding: 15px;
+    border-bottom: 1px solid #000000;
+  }
+}
+
+/* ini bagian section */
+.hero-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 50px;
+  background: url(https://img.pikbest.com/ai/illus_our/20230423/dadfb23872d864d0bd8bccd95344fd8e.jpg!bw700);
+}
+
+.hero-content {
+  flex: 1;
+  margin-right: 20px;
+}
+
+.hero-content h1 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.hero-content p {
+  font-size: 1.1em;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.btn1 {
+  padding: 10px 20px;
+  background: blue;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background 0.3s ease;
+}
+
+.btn1:hover {
+  background: #1ff802;
+}
+
+.btn2 {
+  padding: 10px 20px;
+  background: white;
+  color: black;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background 0.3s ease;
+}
+
+.btn2:hover {
+  background: #2bec05;
+}
+
+.hero-image {
+  flex: 1;
+}
+
+.hero-image img {
+  width: 50%;
+  border-radius: 8px;
+  border: 7px solid rgb(251, 255, 3);
+}
+
+/* Responsive untuk tampilan mobile */
+@media screen and (max-width: 768px) {
+  .hero-section {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-content {
+    margin: 0 0 20px 0;
+  }
+}
+
+/* ini bagiang style.css profile */
+.profile-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 50px;
+  background: #ad8842;
+}
+
+.profile-image {
+  flex: 1;
+  margin-right: 10px; /* Jarak antara gambar dan konten */
+}
+
+.profile-image img {
+  width: 50%;
+  border-radius: 8px;
+  border: 7px solid rgb(251, 255, 3);
+}
+
+.profile-content {
+  flex: 1;
+  margin-left: 2px;
+}
+
+.profile-content h1 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.profile-content p {
+  font-size: 1.1em;
+  color: #666;
+  line-height: 1.6;
+}
+
+/* Responsive untuk tampilan mobile */
+@media screen and (max-width: 768px) {
+  .profile-section {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .profile-image,
+  .profile-content {
+    margin: 0;
+  }
+
+  .profile-image {
+    margin-bottom: 20px;
+  }
+}
+
+/* ini bagiang footer */
+/* Footer Styles */
+footer {
+  background: #333;
+  color: #fff;
+  padding: 20px 0;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.footer-content p {
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.social-icons a {
+  color: #0e0c0c;
+  font-size: 1.5em;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #ece8e7;
+}
+
+/* cidung  style.css ini bagiang dari "menu"  */
+/* Mengatur margin dan padding default */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Mengatur background dan font */
+body {
+  background-color: #f2994a; /* Warna oranye sesuai tampilan pada gambar */
+  font-family: Arial, sans-serif;
+}
+
+/* Section Menu */
+.menu-section {
+  padding: 20px;
+}
+
+#sosmed {
+  width: 50px;
+}
+
+/* Judul "Menu" */
+.menu-section h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #000;
+}
+
+/* Container untuk grid menu */
+.menu-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 kolom */
+  gap: 20px; /* jarak antar item */
+  justify-items: center; /* posisikan item di tengah */
+}
+
+/* Setiap item menu */
+.menu-item {
+  background-color: #fff;
+  border-radius: 8px;
+  width: 200px; /* lebar card */
+  text-align: center;
+  padding: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Gambar di dalam item menu */
+.menu-item img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+/* Info menu: nama kopi & harga */
+.menu-info h2 {
+  margin: 10px 0 5px 0;
+  font-size: 1.1rem;
+}
+
+.menu-info p {
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+/* Tombol "Pesan" */
+.pesan-button {
+  background-color: #57c85f;
+  color: #fff;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.pesan-button:hover {
+  background-color: #45a74b; /* efek hover */
+}
+
+/* Bagian Footer */
+.menu-footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+  margin-top: 20px;
+}
+
+.footer-left,
+.footer-right {
+  color: #000;
+  font-weight: bold;
+}
